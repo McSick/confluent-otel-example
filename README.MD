@@ -7,7 +7,7 @@
   `bootstrap.servers=localhost:9092`
 - JDK 1.8 or 1.11 required for kafak.  I have 1.8 and 1.12
 - Make sure right version of java is set in terminal
-  `exoport JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home"` 
+  `export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home"` 
 - Need to install confluent command and confluent control center
 
 ## Start
