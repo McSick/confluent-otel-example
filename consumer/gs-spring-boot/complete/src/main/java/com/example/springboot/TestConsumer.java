@@ -23,7 +23,7 @@ public class TestConsumer {
 
     public TestConsumer() {
         try {
-            this._cfg = this.loadConfig("/Users/sickles/.confluent/java.config");
+            this._cfg = this.loadConfig("~/.confluent/java.config");
             this._cfg.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
             this._cfg.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaJsonDeserializer");
             this._cfg.put(KafkaJsonDeserializerConfig.JSON_VALUE_TYPE, DataRecord.class);
