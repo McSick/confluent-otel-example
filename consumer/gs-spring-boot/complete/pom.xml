@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>spring-boot</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-boot</name>
+	<description>Demo project for Spring Boot</description>
+	<repositories>
+		<repository>
+			<id>confluent</id>
+			<url>http://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
+	<properties>
+<argLine/>
+<confluent.version>4.0.0</confluent.version>
+<easymock.version>3.5</easymock.version>
+<findbugs-maven-plugin.version>3.0.5</findbugs-maven-plugin.version>
+<jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
+<junit.version>4.12</junit.version>
+<kafka.version>1.0.0-cp1</kafka.version>
+<kafka.scala.version>2.11</kafka.scala.version>
+<maven-assembly.version>2.6</maven-assembly.version>
+<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+<maven-deploy.version>2.8.2</maven-deploy.version>
+<maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
+<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
+<maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
+<mockito-all.version>1.10.19</mockito-all.version>
+<os-maven-plugin.version>1.5.0.Final</os-maven-plugin.version>
+<powermock.version>1.7.3</powermock.version>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+<slf4j.version>1.7.25</slf4j.version>
+<zkclient.version>0.10</zkclient.version>
+<zookeeper.version>3.4.10</zookeeper.version>
+<checkstyle.config.location>checkstyle/checkstyle.xml</checkstyle.config.location>
+<checkstyle.suppressions.location>checkstyle/common-suppressions.xml</checkstyle.suppressions.location>
+    </properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-runtime</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+		<dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-json-serializer</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+		<dependency>
+		<groupId>io.opentelemetry</groupId>
+		<artifactId>opentelemetry-api</artifactId>
+		<version>1.1.0</version>
+		</dependency>
+		<dependency>
+		<groupId>io.opentelemetry</groupId>
+		<artifactId>opentelemetry-extension-annotations</artifactId>
+		<version>1.1.0</version>
+		</dependency>
+
+        <!-- Use a repackaged version of log4j with security patches. Default log4j v1.2 is a transitive dependency of slf4j-log4j12, but it is excluded in common/pom.xml -->
+
+
+		<!-- tag::actuator[] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- end::actuator[] -->
+
+		<!-- tag::tests[] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- end::tests[] -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
