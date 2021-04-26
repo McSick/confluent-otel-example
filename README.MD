@@ -19,28 +19,28 @@
 # Applications 
 
 ## Install 
-`cd producer/gs-spring-boot/complete`
-`cd consumer/gs-spring-boot/complete`
-Run below install command, Skip tests when installing as tests were not updated 
- `mvn install -DskipTests`
+`cd producer/gs-spring-boot/complete`. 
+`cd consumer/gs-spring-boot/complete`. 
+Run below install command, Skip tests when installing as tests were not updated. 
+ `mvn install -DskipTests`. 
 
 ## Start
 
-Download java agents
+Download java agents. 
 `curl -L https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v1.1.0/opentelemetry-javaagent-all.jar > /opt/agents/otel.jar`
 
-Set environment variables for Honeycomb api
+Set environment variables for Honeycomb api. 
 
-`export OTEL_TRACES_EXPORTER=otlp`
-`export OTEL_METRICS_EXPORTER=none`
-`export OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io`
-`export OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=$HONEYCOMB_APIKEY,x-honeycomb-dataset=$HONEYCOMB_DATASET`
+`export OTEL_TRACES_EXPORTER=otlp`. 
+`export OTEL_METRICS_EXPORTER=none`. 
+`export OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io`. 
+`export OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=$HONEYCOMB_APIKEY,x-honeycomb-dataset=$HONEYCOMB_DATASET`. 
 
-Start up apps from "complete" folder
+Start up apps from "complete" folder. 
 
-`java -javaagent:/opt/agents/otel.jar -Dotel.resource.attributes=service.name=producer -jar target/*.jar --server.port=8080`
+`java -javaagent:/opt/agents/otel.jar -Dotel.resource.attributes=service.name=producer -jar target/*.jar --server.port=8080`. 
 
-`java -javaagent:/opt/agents/otel.jar -Dotel.resource.attributes=service.name=consumer -jar target/*.jar --server.port=8081`
+`java -javaagent:/opt/agents/otel.jar -Dotel.resource.attributes=service.name=consumer -jar target/*.jar --server.port=8081`. 
 
 
 
