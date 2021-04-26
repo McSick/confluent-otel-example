@@ -32,15 +32,22 @@ Download java agents.
 Set environment variables for Honeycomb api. 
 
 `export OTEL_TRACES_EXPORTER=otlp`. 
+
 `export OTEL_METRICS_EXPORTER=none`. 
+
 `export OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io`. 
+
 `export OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=$HONEYCOMB_APIKEY,x-honeycomb-dataset=$HONEYCOMB_DATASET`. 
+
 
 Start up apps from "complete" folder. 
 
+
 `java -javaagent:/opt/agents/otel.jar -Dotel.resource.attributes=service.name=producer -jar target/*.jar --server.port=8080`. 
 
+
 `java -javaagent:/opt/agents/otel.jar -Dotel.resource.attributes=service.name=consumer -jar target/*.jar --server.port=8081`. 
+
 
 
 
