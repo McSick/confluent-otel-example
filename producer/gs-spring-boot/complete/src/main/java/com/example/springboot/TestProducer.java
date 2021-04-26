@@ -30,7 +30,7 @@ public class TestProducer {
 
     public TestProducer() {
         try {
-            this._cfg = this.loadConfig("/Users/sickles/.confluent/java.config");
+            this._cfg = this.loadConfig("~/.confluent/java.config");
             this._cfg.put(ProducerConfig.ACKS_CONFIG, "all");
             this._cfg.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
                     "org.apache.kafka.common.serialization.StringSerializer");
