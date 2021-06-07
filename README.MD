@@ -29,8 +29,9 @@
    The `-w` option will write the environment variables to your shell profile.  
 ```shell
 source setup-env.sh YOUR_API_KEY kafkaexample -w
-```
+```   
 
+3. Run the run script   
 
 The syntax for the run script is:
 ```shell
