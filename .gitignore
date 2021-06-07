@@ -16,4 +16,4 @@ dependency-reduced-pom.xml
 README.html
 .idea
 *.iml
-gs-spring-boot/*
+gs-spring-boot
