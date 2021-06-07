@@ -5,7 +5,7 @@
 -  use local host template config 
 -  Create a local file (for example, at $HOME/.confluent/java.config) with configuration parameters to connect to your Kafka cluster.
   `bootstrap.servers=localhost:9092`
-- JDK 1.8 or 1.11 required for kafak.  I have 1.8 and 1.12
+- JDK 1.8 or 1.11 required for kafak.
 - Make sure right version of java is set in terminal.   
   `export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home"` 
 - Need to install confluent command and confluent control center
