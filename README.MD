@@ -71,10 +71,10 @@ http://localhost:<producerport>/Topic1?numMessages=<n>
 ```   
 N Messages on topic `Topic2`   
 ```
-http://localhost:<producerport>/Topic1?numMessages=<n>
+http://localhost:<producerport>/Topic2?numMessages=<n>
 ```   
 N Messages on topic `Topic3`   
 ```
-http://localhost:<producerport>/Topic1?numMessages=<n>
+http://localhost:<producerport>/Topic3?numMessages=<n>
 ```   
 
