@@ -26,9 +26,9 @@ When done
 - Need to install confluent command and confluent control center
 - Assumes cluster is on port 9092. 
 
-## Start
+### Start
 `confluent local services start`
-## Stop
+### Stop
 `confluent local services stop`
 
 
