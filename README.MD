@@ -1,5 +1,20 @@
 # Confluent 
-## Install
+
+User either Docker or Install locally 
+
+## Install Docker  
+1.  Download confluent docker compose  
+`curl --silent --output docker-compose.yml https://raw.githubusercontent.com/confluentinc/cp-all-in-one/6.1.1-post/cp-all-in-one/docker-compose.yml`
+2. Start up docker file  
+`docker compose up` or `docker-compose up -d`
+- Assumes cluster is on port 9092.   
+
+
+When done
+`docker compose down` or `docker-compose down`
+
+
+## Install Local (No Docker)
   Notes:
   https://docs.confluent.io/platform/current/quickstart/ce-quickstart.html#ce-quickstart - Step 1 only 
 -  use local host template config 
