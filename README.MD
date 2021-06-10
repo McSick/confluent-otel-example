@@ -51,7 +51,8 @@ source setup-env.sh YOUR_API_KEY kafkaexample -w
 The syntax for the run script is:
 ```shell
 run.sh <producer port> <consumer port>
-```
+```  
+Where the producer port and consumer port is the ports for the spring web servers to listen on for generating load. See usage below for generating load to the webservers.
 
 The syntax for the stop script is:
 ```shell
