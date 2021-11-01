@@ -20,6 +20,14 @@ tasks:
 
 
 ports:
+  #producer
+  - port: 6001
+    onOpen: open-browser
+
+  #consumer
+  - port: 6002
+    onOpen: ignore
+    
   # zookeeper
   - port: 2181
     onOpen: ignore
