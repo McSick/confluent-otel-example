@@ -1,0 +1,60 @@
+github:
+  prebuilds:
+    # enable for the default branch (defaults to true)
+    master: true
+    # enable for all branches in this repo (defaults to false)
+    branches: true
+    # enable for pull requests coming from this repo (defaults to true)
+    pullRequests: true
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+    addComment: true
+    # configure whether Gitpod registers itself as a status check to pull requests
+    addCheck: false
+
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: start
+    command: confluent local services start && ./run.sh 6001 6002
+
+
+ports:
+  #producer
+  - port: 6001
+    onOpen: open-browser
+
+  #consumer
+  - port: 6002
+    onOpen: ignore
+    
+  # zookeeper
+  - port: 2181
+    onOpen: ignore
+    
+  # Confluent Server (broker)
+  - port: 9092
+    onOpen: ignore
+    
+  # Confluent Server (REST)
+  - port: 8090
+    onOpen: ignore
+    
+  # Schema Registry
+  - port: 8081
+    onOpen: ignore
+  - port: 8082
+    onOpen: ignore
+    
+  # Kafka Connect
+  - port: 8083
+    onOpen: ignore
+    
+  # ksqlDB
+  - port: 8088
+    onOpen: ignore
+    
+  # Confluent Control Center
+  - port: 9021
+    onOpen: notify
+    visibility: public
