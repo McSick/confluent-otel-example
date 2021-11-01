@@ -35,7 +35,7 @@ When done
 # Applications 
 
 1. Download java agents  
-`curl -Lo https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v1.1.0/opentelemetry-javaagent-all.jar > /opt/agents/otel.jar`  
+`curl -L https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v1.1.0/opentelemetry-javaagent-all.jar > /opt/agents/otel.jar`  
 
 
 2. Set up your local environment with your Honeycomb API Key and Dataset name. You will need a Honeycomb Team in order to 
