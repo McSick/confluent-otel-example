@@ -1,8 +1,17 @@
-# Confluent 
+### Setup GitPod environment variables
 
-User either Gitpod, Docker or Install locally 
+You will need to create 2 environment variables in GitPod with your Honeycomb API Key and Dataset name. 
+You will need a Honeycomb Team in order to get your API key. 
+If you don't have a Honeycomb Team you can sign up for a free one [here](https://honeycomb.io/signup).
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/chuck-confluent/template-confluent-cli)
+To create the environment variables you go to your [GitPod user variables](https://gitpod.io/variables) and click the New Variable button.
+1. `HONEYCOMB_API_KEY` set this to your Honeycomb API Key with a Scope of */*
+2. `HONEYCOMB_DATASET` set this to the name of the Honeycomb Dataset to send data to (ie: workshop)
+# Gipod 
+
+Click button to open in Gitpod
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/McSick/confluent-otel-example.git)
 
 ## Install Confluent Docker  
 1. Start up docker file  
